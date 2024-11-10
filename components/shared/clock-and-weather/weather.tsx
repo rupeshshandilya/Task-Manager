@@ -17,7 +17,7 @@ const Weather = () => {
 
   useEffect(() => {
     if (coords) {
-      const ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY}`;
+      const ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${process.env.NEXT_OPEN_WEATHER_API_KEY}`;
       axios.get(ENDPOINT).then((response) => {
         setWeather(response.data);
       });
